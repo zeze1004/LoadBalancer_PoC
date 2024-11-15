@@ -1,11 +1,20 @@
 package domain
 
-type NodeAI struct {
-	isUsed bool
+import "time"
+
+type AInode struct {
+	ID              string
+	BPM             int
+	RPM             int
+	isActive        bool
+	LastHealthCheck time.Time
 }
 
-func NewNodeAI(APIKey string, isUsed bool) *NodeAI {
-	return &NodeAI{
-		isUsed: false,
+func NewAInode(ID string, BPM, RPM int) *AInode {
+	return &AInode{
+		ID:       ID,
+		BPM:      BPM,
+		RPM:      RPM,
+		isActive: true,
 	}
 }
