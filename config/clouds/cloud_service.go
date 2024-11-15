@@ -30,5 +30,4 @@ func LoadAPIKeys() map[string]string {
 		"Azure": os.Getenv("AZURE_API_KEY"),
 		"GCP":   os.Getenv("GCP_API_KEY"),
 	}
-
 }
